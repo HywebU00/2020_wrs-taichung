@@ -1,26 +1,38 @@
 .breadcrumb {
-    border-bottom: 1px solid #EEE;
+    // border-bottom: 1px solid #EEE;
     padding: .1em 0em .1em;
-    font-size: .813em;
-    margin: 0px auto 5px;
+    font-size: 1em;
+    margin: 0px auto 1.5em;
+
+    @include clearfix; 
+
     ul {
         @include li-reset;
+        color: #fff;
+        font-weight: bold;
         li {
-            display: inline-block;
-            margin: 0px .1em .1em 0px;
+            display: block;
+            float: left;
+            // margin: 0px .1em .1em 0px;
             &:before {
-                @extend %slash;
+                // @extend %slash;
+                content: " | ";
+                display: inline-block;
+                color: #fff;
             }
             &:first-child:before {
                 content: "";
                 display: inline-block;
-                color: #666;
-                margin-left: 0;
-                padding: 0;
+                // color: #666;
+                // margin-left: 0;
+                // padding: 0;
+            }
+            &:last-child:before{
+                padding-right: 1em;
             }
         }
     }
     a {
-        @include aSetting_nocolor;
+        @include aSetting_breadcrumb;
     }
 }

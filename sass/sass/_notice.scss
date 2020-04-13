@@ -13,7 +13,7 @@
     border: none;
     &:before {
         position: absolute;
-        top: .7em;
+        top: calc(50% - 8px);
         left: .8em;
         display: block;
         vertical-align: middle;

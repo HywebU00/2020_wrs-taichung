@@ -1,54 +1,54 @@
 // 自行加入的JS請寫在這裡
 $(function() {
     // 首頁輪播
-    $('.mpSlider').slick({
-        mobileFirst: true,
-        dots: true,
-        arrow: true,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        fade: true,
-        lazyLoaded: true,
-        lazyLoad: 'ondemand',
-        ease: 'ease'
-    });
+    // $('.mpSlider').slick({
+    //     mobileFirst: true,
+    //     dots: true,
+    //     arrow: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     autoplay: true,
+    //     fade: true,
+    //     lazyLoaded: true,
+    //     lazyLoad: 'ondemand',
+    //     ease: 'ease'
+    // });
     // 廣告輪播
-    $('.adSlider').slick({
-        mobileFirst: true,
-        dots: false,
-        infinite: true,
-        speed: 300,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        autoplay: true,
-        arrow: true,
-        lazyLoaded: true,
-        lazyLoad: 'ondemand',
-        ease: 'ease',
-        responsive: [{
-            breakpoint: 1200,
-            settings: {
-                slidesToShow: 5,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        },{
-            breakpoint: 768,
-            settings: {
-                slidesToShow: 4,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        },{
-            breakpoint: 575,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                arrows: true
-            }
-        }]
-    });
+    // $('.adSlider').slick({
+    //     mobileFirst: true,
+    //     dots: false,
+    //     infinite: true,
+    //     speed: 300,
+    //     slidesToShow: 2,
+    //     slidesToScroll: 1,
+    //     autoplay: true,
+    //     arrow: true,
+    //     lazyLoaded: true,
+    //     lazyLoad: 'ondemand',
+    //     ease: 'ease',
+    //     responsive: [{
+    //         breakpoint: 1200,
+    //         settings: {
+    //             slidesToShow: 5,
+    //             slidesToScroll: 1,
+    //             arrows: true
+    //         }
+    //     },{
+    //         breakpoint: 768,
+    //         settings: {
+    //             slidesToShow: 4,
+    //             slidesToScroll: 1,
+    //             arrows: true
+    //         }
+    //     },{
+    //         breakpoint: 575,
+    //         settings: {
+    //             slidesToShow: 3,
+    //             slidesToScroll: 1,
+    //             arrows: true
+    //         }
+    //     }]
+    // });
     //燈箱slick+lightBox組合
     $('.cp_slider').slick({
         dots: true,
@@ -96,7 +96,7 @@ $(function() {
         ease: 'ease',
         lazy: true
     });
-     // cp_photo
+    // cp_photo
     $('.Slider-for').on('init reInit afterChange', function(event, slick, currentSlide) {
         var i = (currentSlide ? currentSlide : 0) + 1;
         $('.controls').html(i + '/' + slick.slideCount);
@@ -123,4 +123,16 @@ $(function() {
         infinite: true
     });
     
+    // 進階搜尋開關按鈕
+    $('.advanced_query a.switch').click(function(){
+        if($(this).hasClass('opened')){
+            // alert('已打開');
+            $(this).removeClass('opened');
+            $(this).next('section').stop(true,true).slideUp(600);
+        }else{
+            // alert('關閉');
+            $(this).addClass('opened');
+            $(this).next('section').stop(true,true).slideDown(600);
+        }
+    })
 });

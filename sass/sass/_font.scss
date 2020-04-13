@@ -22,6 +22,19 @@
         cursor: pointer;
     }
 }
+
+@mixin aSetting_breadcrumb($COLOR:$color-word, $NOLINE:none) {
+    color: #fff;
+    text-decoration: $NOLINE;
+    padding: .25em 1em;
+    border-radius: 3px;
+    &:hover,
+    &:focus {
+        background: $aHover;
+        cursor: pointer;
+    }
+}
+
 body {
     @include fontSetting(1em);
     line-height: 1.45em;

@@ -24,7 +24,7 @@
         &>ul, ol {
             list-style-type: none;
             padding: 0;
-            border-top: 2px solid $primaryColor;
+            // border-top: 2px solid $primaryColor;
             &>li {
                 padding: 1em 0;
                 border-bottom: 1px solid #DDD;
@@ -64,6 +64,225 @@
                     display: block;
                     color: #AAA;
                     font-size: .938em;
+                }
+
+                // lize
+                display: flex;
+                flex-direction: row;
+                flex-wrap: wrap;
+                .left{
+                    flex: 3 1 auto;
+
+                    .num {
+                        width: 1.5em;
+                        text-align: right;
+                        padding: .5em;
+                        &:after {
+                            content: ".";
+                            display: inline-block;
+                        }
+                    }
+                    time {
+                        display: inline-block;
+                        color: #AAA;
+                        font-size: .938em;
+                        padding-left: 1.75em;
+                    }
+                    b.view-count{
+                        font-size: .9em; 
+                        margin-left: 12px;
+                        color: #666;
+                    }
+
+                    b.view-count{;
+                        &:before{
+                            content:'';
+                            display: inline-block;
+                            padding-left: 24px;
+                            background: url(../images/basic/icon-eye.png) 50% 50% no-repeat;
+                            height: 12px;
+                            background-size: contain;
+                        }
+                    }
+
+                    p{ margin: 0; }
+                }
+                .right{
+                    flex: 1 1 auto;
+                    text-align: right;
+
+                    a {
+                        // padding: .2em 0px .2em 65px;
+                        padding: 0px;
+                        position: relative;
+                        height: auto;
+                        line-height: 20px;
+                        display: inline-block;
+                        vertical-align: middle;
+                        margin: 0px .2em;
+                        min-width: 32px;
+                        text-align: center;
+                        text-indent: -9999px;
+                        height: 34px;
+                        @include text-overflow;
+                        @include box-sizing;
+                        margin-bottom: .1em;
+                        @include screen('mobile') {
+                            max-width: 2em;
+                            margin: 0px auto .5em 0px;
+                        }
+                        &:hover, &:focus {
+                            &:before {
+                                content: "";
+                                z-index: 99;
+                                position: absolute;
+                                border-radius: 4px;
+                                top: 0;
+                                left: 0;
+                                width: 100%;
+                                height: 100%;
+                                box-shadow: 0px 0px 0px 2px $aHover inset;
+                            }
+                        }
+                        .kb {
+                            font-size: .75em;
+                            color: #666;
+                            display: none;
+                            margin: 0px .5em;
+                        }
+                        &:after {
+                            content: "";
+                            background: url(../images/basic/icon_file.png) no-repeat center center;
+                            background-size: contain;
+                            width: 26px;
+                            height: 28px;
+                            position: absolute;
+                            top: 3px;
+                            left: 3px;
+                            text-align: right;
+                        }
+                        // word系列
+                        &[href$="doc"] {
+                            &:after {
+                                background: url(../images/basic/icon_doc.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="docx"] {
+                            &:after {
+                                background: url(../images/basic/icon_docx.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="odt"] {
+                            &:after {
+                                background: url(../images/basic/icon_odt.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        // excel系列
+                        &[href$="xls"] {
+                            &:after {
+                                background: url(../images/basic/icon_xls.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="csv"] {
+                            &:after {
+                                background: url(../images/basic/icon_csv.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="ods"] {
+                            &:after {
+                                background: url(../images/basic/icon_ods.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="xlsx"] {
+                            &:after {
+                                background: url(../images/basic/icon_xlsx.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        // pdf系列
+                        &[href$="pdf"] {
+                            &:after {
+                                background: url(../images/basic/icon_pdf.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="ppt"] {
+                            &:after {
+                                background: url(../images/basic/icon_ppt.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="pptx"] {
+                            &:after {
+                                background: url(../images/basic/icon_pptx.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="odp"] {
+                            &:after {
+                                background: url(../images/basic/icon_odp.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        // 其他格式
+                        &[href$="zip"] {
+                            &:after {
+                                background: url(../images/basic/icon_zip.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="txt"] {
+                            &:after {
+                                background: url(../images/basic/icon_txt.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="mov"] {
+                            &:after {
+                                background: url(../images/basic/icon_mov.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="mp3"] {
+                            &:after {
+                                background: url(../images/basic/icon_mp3.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="jpg"] {
+                            &:after {
+                                background: url(../images/basic/icon_jpg.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="wmv"] {
+                            &:after {
+                                background: url(../images/basic/icon_wmv.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                        &[href$="mp4"] {
+                            &:after {
+                                background: url(../images/basic/icon_mp4.png) no-repeat center center;
+                                background-size: contain;
+                            }
+                        }
+                    }
+                }
+
+                @include screen('mobile') {
+                    .left{}
+                    .right{
+                        padding-left: 1.5em;
+                        padding-top: 1em;
+                        text-align: left;
+                    }
                 }
             }
         }

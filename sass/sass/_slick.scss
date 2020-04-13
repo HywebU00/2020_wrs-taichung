@@ -116,9 +116,11 @@
 .lightbox_slider {
     h3 {
         font-size: 1.5em;
-        padding: 12px 0px 15px 0px;
-        margin: 0.5em 0px 1.2em;
-        border-bottom: 1px solid $primaryColor;
+        padding-left: 0;
+        border-left: 0;
+        // padding: 12px 0px 15px 0px;
+        // margin: 0.5em 0px 1.2em;
+        // border-bottom: 1px solid $primaryColor;
     }
     background: #fff;
     padding: 1em 0;

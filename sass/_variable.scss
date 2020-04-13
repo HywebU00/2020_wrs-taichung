@@ -3,10 +3,10 @@
 
 //-------------------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
-$primaryColor: #21baff; //主色
-$secondaryColor: #781f79; //輔色
+$primaryColor: #0c35ad; //主色
+$secondaryColor: #229fff; //輔色
 $lightColor: #fcc211; //點綴
-$linkColor: #21baff; //連結
+$linkColor: #229fff; //連結
 $importantColor: #ff3e4d; //重要
 // 但注意真實顏色與語意的關聯必須易於辨識
 $color-blue: #21baff;
@@ -18,10 +18,10 @@ $color-purple: #aa5ac5;
 $color-gray: #ccc;
 $color-dark: #333333;
 $color-hr: #666; //hr顏色
-$color-word: #222; //一般字的顏色
+$color-word: #000; //一般字的顏色
 // 連結顏色
-$aColor: #21baff;
-$aHover: lighten($aColor, 10);
+$aColor: #229fff;
+$aHover: $primaryColor;
 
 // 表單focus顏色
 $form-focus: #21baff; //表單
@@ -39,7 +39,7 @@ $font-size: 1em;
 // 格線系統
 $grid-columns: 12 !default; //格線欄位數
 $grid-gutter-width: 30px !default; //左右padding
-$container-max: 1200px !default; //container最大寬
+$container-max: 1400px !default; //container最大寬
 
 //mediaquery
 $screen-lg: 1400px !default; //電腦

@@ -18,13 +18,15 @@
         float: left;
         margin: 0;
         padding: 0;
-        font-size:1em;
+        font-size:1.25em;
         line-height: 1;
         @include screen('mobile') {
             float: none;
+            font-size:1.5em;
             &>a {
                 width: 100% !important;
                 border-bottom: 1px solid #888;
+                background: #eaeaea;
             }
             &.active>a {
                 border-color: #bbb;
@@ -34,14 +36,16 @@
             display: block;
             padding: 16px 0 14px;
             text-align: center;
-            background-color: #aaa;
-            color: #fff;
+            // background-color: #aaa;
+            color: #222;
             font-weight: bold;
             text-decoration: none;
+            border-bottom: solid 2px rgba(204, 204, 204, 0.5);
             @include text-overflow;
             @include box-sizing;
             &:hover {
-                background: $primaryColor;
+                color: #fff;
+                background: $secondaryColor;
             }
         }
     }
@@ -55,6 +59,9 @@
         background: $secondaryColor;
     }
 }
+
+
+
 // 顯示content
 .active+.tabContent {
     display: block;
@@ -69,6 +76,7 @@
     display: none;
     @include screen('mobile') {
         position: static;
+        border-bottom: solid 2px rgba(204,204,204,0.5);
     }
     ul {
         @include li-reset;
@@ -83,12 +91,61 @@
         }
         a {
             @include aSetting_nocolor;
+            font-size: 1.1em;
         }
         time {
             display: inline-block;
             margin: 0 0 0 1em;
             font-size: .813em;
             color: #666;
+        }
+    }
+}
+
+// 簡易首頁
+.simple-mp{
+    h2{
+        border-left: 0 !important;
+    }
+    .tabContent {
+        padding: 30px 0;
+        ul{
+            display: -webkit-flex;
+            display: -moz-flex;
+            display: -ms-flex;
+            display: -o-flex;
+            display: flex;
+            flex-flow: row wrap;
+        }
+        li{
+            width: calc( 33.333% - 20px);
+            margin: 10px;
+            border-bottom: 0;
+            background: #efefef;
+            
+            a{
+                display: block;
+                padding: 1em 2em;
+                text-align: center;
+            }
+
+            &:hover{
+                background: $secondaryColor;
+                a{ color: #fff; }
+            }
+        }
+    }
+
+    @include screen('mobile') {
+        .tabContent{
+            padding: 0 0 20px;
+            li{
+                width: 100%;
+                margin: 0 0 .25em 0;
+                padding: 1em 1.5em;
+                background: #fff;
+                border-bottom: dotted 1px #b1b1b1;
+            }
         }
     }
 }
