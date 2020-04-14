@@ -139,6 +139,15 @@ div.tag {
         padding-left: 0;
         border-left: 0;
     }
+    &.colorful{
+        // th{
+        //     background: #3b4954;
+        //     color: #fff;
+        // }
+        tr.Yellow{ background:#FFFDD0; }
+        tr.Green{ background: #dfffe7; }
+        tr.Blue{ background: #d2f6ff; }
+    }
 }
 // 關鍵字
 .keyword{ 
