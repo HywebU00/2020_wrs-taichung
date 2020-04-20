@@ -227,9 +227,14 @@
                 background-size: contain;
                 color: #fff;
             }
-            &.weather-gale{
-                background: url(../images/icon-hotnews-weather-gale.png) right 12px top 50% no-repeat, #ce2424;
-                background-size: contain;
+
+            // 氣候特報 共同設定  -------------  start
+            &.weather-typhoon-prev, &.weather-typhoon, &.weather-typhoon-sea, &.weather-typhoon-none,  // 颱風
+            &.weather-gale, &.weather-gale-sea,                                                        // 強風
+            &.weather-rain-super, &.weather-rain-huge, &.weather-rain-big, &.weather-rain,             // 雨勢
+            &.weather-temp-cold, &.weather-temp-hot,                                                   // 溫度
+            &.weather-Tsunami, &.weather-Tsunami-none,                                                 // 海嘯
+            &.weather-fog, &.weather-wave{                                                             // 其他
                 color: #fff;
                 line-height: 20px;
                 span{
@@ -237,8 +242,60 @@
                     font-size: 75%;
                 }
             }
+
+            // 陸上強風特報、海上強風特報
+            &.weather-gale, &.weather-gale-sea{
+                background: url(../images/icon-hotnews-weather-gale.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+            // 大雨特報
+            &.weather-rain-super, &.weather-rain-huge, &.weather-rain-big, &.weather-rain{
+                background: url(../images/icon-hotnews-weather-rain.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+            // 颱風、熱帶氣旋
+            &.weather-typhoon-prev, &.weather-typhoon, &.weather-typhoon-sea{
+                background: url(../images/icon-hotnews-weather-typhoon.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+            &.weather-typhoon-none{
+                background: url(../images/icon-hotnews-weather-typhoon-none.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+            // 低溫特報
+            &.weather-temp-cold{
+                background: url(../images/icon-hotnews-weather-temp-cold.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+            // 高溫特報
+            &.weather-temp-hot{
+                background: url(../images/icon-hotnews-weather-temp-hot.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+            // 海嘯
+            &.weather-Tsunami{
+                background: url(../images/icon-hotnews-weather-Tsunami.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+            &.weather-Tsunami-none{
+                background: url(../images/icon-hotnews-weather-Tsunami-none.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+            // 濃霧
+            &.weather-fog{
+                background: url(../images/icon-hotnews-weather-fog.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+            // 長浪
+            &.weather-wave{
+                background: url(../images/icon-hotnews-weather-wave.svg) right 12px top 50% no-repeat, #ce2424;
+                background-size: contain;
+            }
+
+            // 氣候特報 共同設定  -------------  End
+
             &.vote{
-                background: url(../images/icon-hotnews-vote.png) right 50px top 50% no-repeat, #fff;
+                background: url(../images/icon-hotnews-vote.svg) right 50px top 50% no-repeat, #fff;
                 background-size: contain;
                 color: #222;
                 p{
