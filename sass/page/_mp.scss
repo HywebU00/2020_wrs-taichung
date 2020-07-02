@@ -200,7 +200,12 @@
 
         height: 126px;
 
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flex;
+        display: -o-flex;
         display: flex;
+        
         flex-flow: row wrap;
         justify-content: flex-end;
         align-content: center;
