@@ -20,7 +20,7 @@
 
     <!-- 示範用style<，不用摳 -->
     <style>
-        .main .user .hotnews{ height: auto; width: 100%; }
+        .main .user .hotnews{ height: auto; width: 100%; justify-content: flex-start; }
         .main .user .hotnews a{ flex: 0 1 auto; }
     </style>
 </head>
@@ -94,37 +94,80 @@
         </header>
         <!-- header End -->
         <!-- main Start -->
-        <div id="center" class="main">
-            <section class="user">
-                <div class="container">
-                    <div class="hotnews">
-                        <!-- 氣候變化，請觀察 a 上的 class name -->
-                        <!-- 颱風 -->
-                        <a href="#" class="weather-typhoon-prev hvr-float"><p><span>中央氣象警報</span>熱帶性低氣壓特報</p></a>
-                        <a href="#" class="weather-typhoon hvr-float"><p><span>中央氣象警報</span>海上陸上颱風警報</p></a>
-                        <a href="#" class="weather-typhoon-sea hvr-float"><p><span>中央氣象警報</span>海上颱風警報</p></a>
-                        <a href="#" class="weather-typhoon-none hvr-float"><p><span>中央氣象警報</span>解除颱風警報</p></a>
-                        <!-- 強風 -->
-                        <a href="#" class="weather-gale hvr-float"><p><span>中央氣象警報</span>陸上強風特報</p></a>
-                        <a href="#" class="weather-gale-sea hvr-float"><p><span>中央氣象警報</span>海上強風特報</p></a>
-                        <!-- 雨勢 -->
-                        <a href="#" class="weather-rain-super hvr-float"><p><span>中央氣象警報</span>超大豪雨特報</p></a>
-                        <a href="#" class="weather-rain-huge hvr-float"><p><span>中央氣象警報</span>大豪雨特報</p></a>
-                        <a href="#" class="weather-rain-big hvr-float"><p><span>中央氣象警報</span>豪雨特報</p></a>
-                        <a href="#" class="weather-rain hvr-float"><p><span>中央氣象警報</span>大雨特報</p></a>
-                        <!-- 溫度 -->
-                        <a href="#" class="weather-temp-cold hvr-float"><p><span>中央氣象警報</span>低溫特報</p></a>
-                        <a href="#" class="weather-temp-hot hvr-float"><p><span>中央氣象警報</span>高溫資訊</p></a>
-                        <!-- 海嘯 -->
-                        <a href="#" class="weather-Tsunami hvr-float"><p><span>中央氣象警報</span>海嘯警報</p></a>
-                        <a href="#" class="weather-Tsunami-none hvr-float"><p><span>中央氣象警報</span>解除海嘯警報</p></a>
-                        <!-- 其他 -->
-                        <a href="#" class="weather-fog hvr-float"><p><span>中央氣象警報</span>濃霧特報</p></a>
-                        <a href="#" class="weather-wave hvr-float"><p><span>中央氣象警報</span>長浪即時訊息</p></a>
-                    </div>
+        <div id="center" class="main innerpage">
+            <!-- 內頁新增一個classname-->
+            <div class="container">
+                <!-- breadcrumb路徑 -->
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">節點</a></li>
+                        <li>節點</li>
+                    </ul>
                 </div>
-            </section>
 
+                <!-- function功能區塊 -->
+                <div class="function">
+                    <ul>
+                        <li class="back"><a href="#">回上一頁</a></li>
+                        <li class="print"><a href="#">友善列印</a></li>
+                        <!-- <li class="forward"><a href="#">轉寄友人</a></li> -->
+                    </ul>
+                </div>
+
+                <div class="inner">
+                    <!-- h2節點 -->
+                    <h2 class="title">節點標題</h2>
+                    <!-- NP Start -->
+
+                    <!-- 氣候列表 -->
+                    <section class="user">
+                        <div class="container">
+                            <h3>氣候列表，copy < a > 上的 class name 就好</h3>
+                            <div class="hotnews">
+                                <!-- 氣候變化，請觀察 a 上的 class name -->
+                                <!-- 颱風 -->
+                                <a href="#" class="weather-typhoon-prev hvr-float"><p><span>中央氣象警報</span>熱帶性低氣壓特報</p></a>
+                                <a href="#" class="weather-typhoon hvr-float"><p><span>中央氣象警報</span>海上陸上颱風警報</p></a>
+                                <a href="#" class="weather-typhoon-sea hvr-float"><p><span>中央氣象警報</span>海上颱風警報</p></a>
+                                <a href="#" class="weather-typhoon-none hvr-float"><p><span>中央氣象警報</span>解除颱風警報</p></a>
+                                <!-- 強風 -->
+                                <a href="#" class="weather-gale hvr-float"><p><span>中央氣象警報</span>陸上強風特報</p></a>
+                                <a href="#" class="weather-gale-sea hvr-float"><p><span>中央氣象警報</span>海上強風特報</p></a>
+                                <!-- 雨勢 -->
+                                <a href="#" class="weather-rain-super hvr-float"><p><span>中央氣象警報</span>超大豪雨特報</p></a>
+                                <a href="#" class="weather-rain-huge hvr-float"><p><span>中央氣象警報</span>大豪雨特報</p></a>
+                                <a href="#" class="weather-rain-big hvr-float"><p><span>中央氣象警報</span>豪雨特報</p></a>
+                                <a href="#" class="weather-rain hvr-float"><p><span>中央氣象警報</span>大雨特報</p></a>
+                                <!-- 溫度 -->
+                                <a href="#" class="weather-temp-cold hvr-float"><p><span>中央氣象警報</span>低溫特報</p></a>
+                                <a href="#" class="weather-temp-hot hvr-float"><p><span>中央氣象警報</span>高溫資訊</p></a>
+                                <!-- 海嘯 -->
+                                <a href="#" class="weather-Tsunami hvr-float"><p><span>中央氣象警報</span>海嘯警報</p></a>
+                                <a href="#" class="weather-Tsunami-none hvr-float"><p><span>中央氣象警報</span>解除海嘯警報</p></a>
+                                <!-- 其他 -->
+                                <a href="#" class="weather-fog hvr-float"><p><span>中央氣象警報</span>濃霧特報</p></a>
+                                <a href="#" class="weather-wave hvr-float"><p><span>中央氣象警報</span>長浪即時訊息</p></a>
+                            </div>
+                        </div>
+                    </section>
+
+                    <!-- 中央氣象警報特報   .user 後再加 .list -->
+                    <section class="user list">
+                        <div class="container">
+                            <h3>中央氣象警報特報， .user 後再加 .list</h3>
+                            <div class="hotnews">
+                                <!-- 氣候變化，請觀察 a 上的 class name -->
+                                <!-- 颱風 -->
+                                <a href="#" class="weather-rain-big hvr-float"><p>06/14 04:05 發布豪雨特報</p></a>
+                                <a href="#" class="weather-temp-hot hvr-float"><p>06/14 06:17 發布高溫資訊</p></a>
+                                <a href="#" class=""><p>06/14 04:23 發布第 032 號顯著有感地震報告</p></a>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- NP End -->
+                </div>
+            </div>
         </div>
     </div>
     <a href="javascript:;" class="scrollToTop">回頁首</a>
