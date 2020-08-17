@@ -178,12 +178,26 @@
                 margin: 0;
 
                 align-self: center;
+                transition: all .6 ease;
+
+                a{
+                    color: #fff;
+                    background: rgba(0,0,0,0);
+                    width: 100%;
+                    display: inline-block;
+                    padding: 12px 0;
+                    border-radius: 2px;
+                    &:hover, &:focus{
+                        // text-decoration: underline;
+                        background: rgba(0,0,0,0.5);
+                    }
+                }
 
                 &:before{
                     display: table;
                     width: 70px;
                     font-size: 35%;
-                    margin: 0 auto .75em;
+                    margin: 0 auto;
                 }
             }
 
